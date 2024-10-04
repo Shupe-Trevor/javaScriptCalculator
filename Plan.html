@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Software Development Plan</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+    </head>
+
+    <body>
+        <H1 Class="plan">Software Development Plan</H1>
+        <div id="links">
+            <ol>
+                <li><a class="links" href= "./index.html">JavaScript Calculator</a></li>
+            </ol>
+        </div>
+        <div id="phase00" class="phase">
+            <h2>Phase 0:Requirements Specification</h2>
+            <p>
+                For this assignment I need to write a Js- Calculator only using JavaScript and basically no HTML. This webpage will 
+                have a main div that will contain the expression building UI. This UI will have an input for the type of mathematical expression. 
+                There will be two number inputs for the Operands. There will be a color input as well as. There need to be a compute button that
+                will create the expression inputted. Onclick of this button JavaScript will create a new Result div with the background color matching
+                the input color from the user. 
+            </p>
+            <p>
+                The new result divs will contain the time of the creation and the expression build including the answer. The result divs will have an onclick
+                that will remove them from the page. 
+            </p>
+        </div>
+        <div id="phase01" class="phase">
+            <h2>Phase 1: System Analysis</h2>
+            <p>
+                The input for this Calculator will be two number inputs, an math type input, and a color input. There inputs are dependent on the user.
+            </p>
+            <p>
+                The color and the math type will have default inputs, The numbers will not. Upon error a new red div will display the error message.
+            </p>
+        </div>
+        <div id="phase02" class="phase">
+            <h2>Phase 2: Design</h2>
+            <p>
+                I will need onclicks to complete the action on compute and deletion. These onclick events will be lamda functions. The delete 
+                will simply delete the newDiv that was clicked. The compute will error check and call createDiv based on the checks. 
+
+            </p>
+            <p>
+                I will need a function to create newResult divs. This function will take text and colors as args. This function will create
+                a timestamp. Creation of the divs will happen here too. 
+            </p>
+            <p>
+                Besides the above the majority of the code will be creating the layout. This code is simple JavaScript.
+            </p>
+        </div>
+        <div id="phase03" class="phase">
+            <h2>Phase 3: Implementation</h2>
+            <p>
+                <code>var makeNewDiv = function(text, backColor, textColor) {</code>
+            </p>
+            <p class="tab">
+                <code>
+                    const date = new Date()<br>
+                    const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];<br>
+                    const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];<br>
+                    let divDate = document.createElement("span")<br>
+                    divDate.setAttribute("Style", "color:" + textColor)<br>
+                    divDate.setAttribute("Class", "timestamp")<br>
+                    divDate.textContent = month + "/" + day + "/" + year + "  " + hour + ":" + minutes + ":" + seconds;<br>
+                    divDate.textColor = textColor;<br>                
+                    let divText = document.createElement("span")<br>
+                    divText.setAttribute("Style", "color:" + textColor)<br>
+                    divText.textContent = text;<br>                
+                    let newDiv = document.createElement("div")<br>
+                    newDiv.setAttribute("Style", "Background: " + backColor)<br>
+                    newDiv.setAttribute("Class", "result")<br>
+                    newDiv.appendChild(divDate)<br>
+                    newDiv.appendChild(divText)<br>
+                    document.body.insertBefore(newDiv, document.getElementsByClassName("result")[0]);<br>
+                    newDiv.onclick= () =>{<br>
+                        newDiv.remove()<br>
+                    }<br>
+                    return 0<br>
+                }<br>
+                </code>
+            </p>
+            <p>
+                <code>compute.onclick = () =>{</code>
+            </p>
+            <p class="tab">
+                <code>
+                        if (leftSide.value.length == 0 | rightSide.value.length == 0 ){<br>
+                            makeNewDiv("Error!!!!  Missing One Or More Operands!", "Red", "Black")<br>
+                        }<br>
+                        else{<br>
+                            operation.options.selectedIndex<br>
+                            const express = leftSide.value.trim() + operation[operation.selectedIndex].text + rightSide.value.trim();<br>
+                            var answer = eval(express)<br>
+                            makeNewDiv(express + "=" + answer,  inputColor.value, inputColorText.value)<br>
+                        }<br>
+                    }<br>
+                </code>
+            </p>
+        </div>
+        <div id="phase04" class="phase">
+            <h2>Phase 4: Testing & Debugging</h2>
+            <p>
+                Testing will mainly consist of testing the onclick methods. In creation of the page I will have tested where the divs are
+                . The onclick methods however are UI started. The deletion on click testing will consisted of did it delete the right div. The 
+                compute button will consist of testing each math type method as well as the UI inputs. 
+            </p>
+            <p>
+                Testing went as planed. I didn't like the text colors so I added a input for text color.
+            </p>
+        </div>
+        <div id="phase05" class="phase">
+            <h2>Phase 5: Deployment</h2>
+            <p>
+                Submitted through git. I have made sure the .gitignore is present.
+            </p>
+        </div>
+        <div id="phase06" class="phase">
+            <h2>Phase 6: Maintenance</h2>
+            <p>
+                Writing a whole webpage with only JavaScript is sloppy. Honestly, in a few weeks if would take me a second
+                to read the script let alone understand and debug. Future enhancements of this page would be to mix JavaScript with HTML
+                . If this page is ever open to public I would need to replace the eval with something else. 
+            </p>
+        </div>
+    </body>
+</html>

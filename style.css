@@ -1,0 +1,225 @@
+body.js-calculator{
+    background-color: rgb(255, 255, 255);
+}
+
+div.mainDiv{
+    border-color: rgb(0,0,0);
+    background:   rgb(75,75,75);
+    box-shadow: 1px 1px 2px rgba(200,200,0,0.4);
+    color: rgb(255, 255, 255);
+    text-align: center;
+	padding: 3px 10px;
+	margin: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+
+}
+
+a.js-calculator{
+    color: white;
+}
+
+div.result{
+    text-align: center;
+	padding: 3px 10px;
+	margin: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+
+}
+
+h1.js-calculator{
+    background-color: none;
+}
+
+h3.js-calculator{
+    all: none;
+}
+
+.timestamp {
+    font-size: smaller;
+    font-family: monospace;
+    padding: 0px 10px;
+}
+
+
+body {
+    background-color: lightblue;
+}
+
+#phase00{
+    background-color: Aquamarine;
+}
+#phase01{
+    background-color: DarkCyan;
+}
+#phase02{
+    background-color: CornflowerBlue;
+}
+#phase03{
+    background-color: Bisque;
+}
+#phase04{
+    background-color: AliceBlue;
+}
+#phase05{
+    background-color: Blue;
+}
+#phase06{
+    background-color: CadetBlue;
+}
+
+.info{
+    background-color: rgb(123, 235, 123);
+    color: Black;
+    border: 1px solid black;
+    padding: 2mm;
+    border-radius: 25px;
+
+}
+
+.commentsNumber{
+    text-align: right;
+}
+
+#links{
+    color: yellow;
+    background-color: purple;
+    border: 1px solid black;
+    padding: 2mm;
+    border-radius: 25px;
+}
+
+.tab{
+    margin-left: 40px;
+}
+
+.gradingLinks{
+    color: yellow;
+    background-color: purple;
+    border: 1px solid black;
+    padding: 2mm;
+    border-radius: 25px;
+}
+
+div.post{
+        color: black;
+        background-color: Aquamarine;
+        margin: 5px 30px 5px 30px;
+        padding: 2mm;
+        border-radius: 25px;
+}
+
+.form{
+    color: black;
+    background-color: rgb(59, 194, 235);
+    margin: 5px 30px 5px 30px;
+    padding: 2mm;
+    border-radius: 25px;
+}
+
+div.comments{
+    color: black;
+    background-color: rgb(97, 212, 145);
+    margin: 5px 30px 5px 30px;
+    padding: 2mm;
+    border-radius: 25px;
+}
+
+div.postHidden{
+    color: black;
+    background-color: Aquamarine;
+    margin: 5px 500px 5px 30px;
+    padding: 2mm;
+    border-radius: 25px;
+}
+
+div.postHidden:hover{
+    background-color: rgb(145, 191, 202);
+}
+
+div.tips{
+        background-color: Aquamarine;
+        margin: 5px 30px 5px 30px;
+        padding: 2mm;
+        border-radius: 25px;
+}
+
+div.stats{
+        color: black;
+        background-color: Aquamarine;
+        margin: 5px 30px 5px 30px;
+        padding: 2mm;
+        border-radius: 25px;
+}
+
+div.phase{
+        background-color: Aquamarine;
+        line-height: 2;
+        margin: 5px 200px 5px 200px;
+        padding: 2mm;
+        border-radius: 25px;
+}
+
+div.post p{
+    font-family: Times;
+    font-size: 16px;
+}
+
+div.post h6{
+    font-style: italic;
+}
+
+a.links{
+    color: yellow;
+}
+
+.tips li:nth-child(2n){
+    background-color: white;
+}
+
+
+
+.links:hover{
+    color: White;
+}
+
+a:hover{
+    color: red;
+}
+
+h1.plan{
+    color: White;
+    background-color: purple;
+    border: 1px solid black;
+    padding: 2mm;
+    text-align: center;
+    border-radius: 25px;
+}
+
+img.profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+img{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+code{
+    color: red;
+    border: 0.5px solid black;
+    background-color: silver;
+    border-radius: 5px;
+}
+
+
+
